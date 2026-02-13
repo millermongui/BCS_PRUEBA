@@ -53,3 +53,23 @@ test('VALIDACION CODIGO API SIN UI', async ({ request }, testInfo) => {
   )
 
 })
+
+test('Capturar body servicio TikTok', async ({ page }) => {
+
+  page.on('response', async (response) => {
+    if (response.url().includes('analytics.tiktok.com/api/v2/pixel/inter')) {
+      
+      const status = response.status();
+      const body = await response.text(); // usa .json() si es JSON
+
+      console.log('------ SERVICIO TIKTOK ------');
+      console.log('Status:', status);
+      console.log('Body:', body);
+      console.log('-----------------------------');
+    }
+  });
+
+  // Aquí ejecutas el flujo normal de tu aplicación
+  //await page.goto('https://tu-aplicacion.com');
+
+});

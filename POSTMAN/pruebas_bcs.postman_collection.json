@@ -1,0 +1,364 @@
+{
+  "info": {
+    "_postman_id": "05a454dd-dbba-41e4-9f69-92b40b5be2d8",
+    "name": "pruebas_bcs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "8069032"
+  },
+  "item": [
+    {
+      "name": "crearUsuarioApiPruebasCod400",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const expectedStatus = [400];\r",
+              "\r",
+              "pm.test(\"Status code esperado\", function () {\r",
+              "    pm.expect(expectedStatus).to.include(pm.response.code);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "accept",
+            "value": "application/json, text/plain, */*"
+          },
+          {
+            "key": "accept-language",
+            "value": "es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,es-CO;q=0.5"
+          },
+          {
+            "key": "authorization",
+            "value": "Bearer 56bc05e6d8b0821d1d6fbbbd78c0e36ebfb330504835b0e1007590370279ec4a"
+          },
+          {
+            "key": "content-type",
+            "value": "application/json"
+          },
+          {
+            "key": "origin",
+            "value": "https://gorest.co.in"
+          },
+          {
+            "key": "priority",
+            "value": "u=1, i"
+          },
+          {
+            "key": "referer",
+            "value": "https://gorest.co.in/rest-console"
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Microsoft Edge\";v=\"144\""
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"Windows\""
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "empty"
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "cors"
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "same-origin"
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0"
+          },
+          {
+            "key": "x-csrf-token",
+            "value": "bLnofxHJBJPAX3ClZqcqEGAIl-tzbutOMGrjA2bCwLajMaIiAsbhUvxeFAxOwI2-bUao1n1_5ppL0Eeb7_rNvg"
+          },
+          {
+            "key": "x-requested-with",
+            "value": "XMLHttpRequest"
+          },
+          {
+            "key": "Cookie",
+            "value": "cf_clearance=VUdMiwKfxoQbngReBMQYIU.ilWDqKJ5WR1W402c.Loo-1770954859-1.2.1.1-tTI2aln.T.Fmdbr1wT2LlNWhRf505e2ikZpUlAV7zo0u6cpS8qkSWiTM07DnJKzQWBtAIsBusx853srWza6vvMDe5Cf_5deDZWCP5sPwhIz9aa65XalgHwLipdBpdphU3q0_tBva0Vu42BjC3iU2HcxmgmAeIlA5PzloMu5vGJd1yPNU26SShWWYHbawTCjLxlQ5olaDO3V36gT2Cj.t9UAhMKBFFivdCnJ.zlxijA4; _gorest_session=E%2BnE0x0GtXjp1htzukKZ8%2F6RX0IAa2k0AkE1QQzpeDdUgkGAgP8kDAa%2FxIT%2FJL4Yo0VFtFfQLMLpTS5Rdc43KsjPyrHoNiqinvhivoG1r4Tg5q5G1s91Bh9%2Bj6KwulrbXrAgQ%2BvM8wT29oHxxn3m99krILcJs9Q5oVKcu%2ByCj2YLyg6NdSQLXvbwF0c%2F5I91B3OSlhXUk8WsY5ucGncKC4zeMDFNrM3YymbTfPOeKbbmDi8OPydcdK5Jg4aqCKjapVJzLr2lq4vd%2FWUECjQBF8Ybt4hseyQiSOjOMuIb1q5egvwW9IvUg3F7fQfLYp4%3D--yGnglCr7GTvBx%2FhV--%2B60FmrwmUPidwVFKvY04uQ%3D%3D"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\n    \"email\": \"{{$randomFirstName}}@HOTMAIL.COM\",\n    \"name\": \"{{$randomFirstName}}\",\n    \"gender\": \"male\",\n    \"status\": \"active\"\n  }\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://gorest.co.in/public/v2/users%%",
+          "protocol": "https",
+          "host": [
+            "gorest",
+            "co",
+            "in"
+          ],
+          "path": [
+            "public",
+            "v2",
+            "users%%"
+          ]
+        },
+        "description": "Generated from cURL: curl 'https://gorest.co.in/public/v2/users' \\\r\n  -H 'accept: application/json, text/plain, */*' \\\r\n  -H 'accept-language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,es-CO;q=0.5' \\\r\n  -H 'authorization: Bearer 56bc05e6d8b0821d1d6fbbbd78c0e36ebfb330504835b0e1007590370279ec4a' \\\r\n  -H 'content-type: application/json' \\\r\n  -b 'cf_clearance=VUdMiwKfxoQbngReBMQYIU.ilWDqKJ5WR1W402c.Loo-1770954859-1.2.1.1-tTI2aln.T.Fmdbr1wT2LlNWhRf505e2ikZpUlAV7zo0u6cpS8qkSWiTM07DnJKzQWBtAIsBusx853srWza6vvMDe5Cf_5deDZWCP5sPwhIz9aa65XalgHwLipdBpdphU3q0_tBva0Vu42BjC3iU2HcxmgmAeIlA5PzloMu5vGJd1yPNU26SShWWYHbawTCjLxlQ5olaDO3V36gT2Cj.t9UAhMKBFFivdCnJ.zlxijA4; _gorest_session=E%2BnE0x0GtXjp1htzukKZ8%2F6RX0IAa2k0AkE1QQzpeDdUgkGAgP8kDAa%2FxIT%2FJL4Yo0VFtFfQLMLpTS5Rdc43KsjPyrHoNiqinvhivoG1r4Tg5q5G1s91Bh9%2Bj6KwulrbXrAgQ%2BvM8wT29oHxxn3m99krILcJs9Q5oVKcu%2ByCj2YLyg6NdSQLXvbwF0c%2F5I91B3OSlhXUk8WsY5ucGncKC4zeMDFNrM3YymbTfPOeKbbmDi8OPydcdK5Jg4aqCKjapVJzLr2lq4vd%2FWUECjQBF8Ybt4hseyQiSOjOMuIb1q5egvwW9IvUg3F7fQfLYp4%3D--yGnglCr7GTvBx%2FhV--%2B60FmrwmUPidwVFKvY04uQ%3D%3D' \\\r\n  -H 'origin: https://gorest.co.in' \\\r\n  -H 'priority: u=1, i' \\\r\n  -H 'referer: https://gorest.co.in/rest-console' \\\r\n  -H 'sec-ch-ua: \"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Microsoft Edge\";v=\"144\"' \\\r\n  -H 'sec-ch-ua-mobile: ?0' \\\r\n  -H 'sec-ch-ua-platform: \"Windows\"' \\\r\n  -H 'sec-fetch-dest: empty' \\\r\n  -H 'sec-fetch-mode: cors' \\\r\n  -H 'sec-fetch-site: same-origin' \\\r\n  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0' \\\r\n  -H 'x-csrf-token: bLnofxHJBJPAX3ClZqcqEGAIl-tzbutOMGrjA2bCwLajMaIiAsbhUvxeFAxOwI2-bUao1n1_5ppL0Eeb7_rNvg' \\\r\n  -H 'x-requested-with: XMLHttpRequest' \\\r\n  --data-raw $'  {\\n    \"email\": \"MILLER@HOTMAIL.COM\",\\n    \"name\": \"MILLER\",\\n    \"gender\": \"male\",\\n    \"status\": \"active\"\\n  }\\n'"
+      },
+      "response": []
+    },
+    {
+      "name": "crearUsuarioApiPruebasCod200",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const expectedStatus = [200,201];\r",
+              "\r",
+              "pm.test(\"Status code esperado\", function () {\r",
+              "    pm.expect(expectedStatus).to.include(pm.response.code);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "accept",
+            "value": "application/json, text/plain, */*"
+          },
+          {
+            "key": "accept-language",
+            "value": "es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,es-CO;q=0.5"
+          },
+          {
+            "key": "authorization",
+            "value": "Bearer 56bc05e6d8b0821d1d6fbbbd78c0e36ebfb330504835b0e1007590370279ec4a"
+          },
+          {
+            "key": "content-type",
+            "value": "application/json"
+          },
+          {
+            "key": "origin",
+            "value": "https://gorest.co.in"
+          },
+          {
+            "key": "priority",
+            "value": "u=1, i"
+          },
+          {
+            "key": "referer",
+            "value": "https://gorest.co.in/rest-console"
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Microsoft Edge\";v=\"144\""
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"Windows\""
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "empty"
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "cors"
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "same-origin"
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0"
+          },
+          {
+            "key": "x-csrf-token",
+            "value": "bLnofxHJBJPAX3ClZqcqEGAIl-tzbutOMGrjA2bCwLajMaIiAsbhUvxeFAxOwI2-bUao1n1_5ppL0Eeb7_rNvg"
+          },
+          {
+            "key": "x-requested-with",
+            "value": "XMLHttpRequest"
+          },
+          {
+            "key": "Cookie",
+            "value": "cf_clearance=VUdMiwKfxoQbngReBMQYIU.ilWDqKJ5WR1W402c.Loo-1770954859-1.2.1.1-tTI2aln.T.Fmdbr1wT2LlNWhRf505e2ikZpUlAV7zo0u6cpS8qkSWiTM07DnJKzQWBtAIsBusx853srWza6vvMDe5Cf_5deDZWCP5sPwhIz9aa65XalgHwLipdBpdphU3q0_tBva0Vu42BjC3iU2HcxmgmAeIlA5PzloMu5vGJd1yPNU26SShWWYHbawTCjLxlQ5olaDO3V36gT2Cj.t9UAhMKBFFivdCnJ.zlxijA4; _gorest_session=E%2BnE0x0GtXjp1htzukKZ8%2F6RX0IAa2k0AkE1QQzpeDdUgkGAgP8kDAa%2FxIT%2FJL4Yo0VFtFfQLMLpTS5Rdc43KsjPyrHoNiqinvhivoG1r4Tg5q5G1s91Bh9%2Bj6KwulrbXrAgQ%2BvM8wT29oHxxn3m99krILcJs9Q5oVKcu%2ByCj2YLyg6NdSQLXvbwF0c%2F5I91B3OSlhXUk8WsY5ucGncKC4zeMDFNrM3YymbTfPOeKbbmDi8OPydcdK5Jg4aqCKjapVJzLr2lq4vd%2FWUECjQBF8Ybt4hseyQiSOjOMuIb1q5egvwW9IvUg3F7fQfLYp4%3D--yGnglCr7GTvBx%2FhV--%2B60FmrwmUPidwVFKvY04uQ%3D%3D"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\n    \"email\": \"{{$randomFirstName}}@HOTMAIL.COM\",\n    \"name\": \"{{$randomFirstName}}\",\n    \"gender\": \"male\",\n    \"status\": \"active\"\n  }\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://gorest.co.in/public/v2/users",
+          "protocol": "https",
+          "host": [
+            "gorest",
+            "co",
+            "in"
+          ],
+          "path": [
+            "public",
+            "v2",
+            "users"
+          ]
+        },
+        "description": "Generated from cURL: curl 'https://gorest.co.in/public/v2/users' \\\r\n  -H 'accept: application/json, text/plain, */*' \\\r\n  -H 'accept-language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,es-CO;q=0.5' \\\r\n  -H 'authorization: Bearer 56bc05e6d8b0821d1d6fbbbd78c0e36ebfb330504835b0e1007590370279ec4a' \\\r\n  -H 'content-type: application/json' \\\r\n  -b 'cf_clearance=VUdMiwKfxoQbngReBMQYIU.ilWDqKJ5WR1W402c.Loo-1770954859-1.2.1.1-tTI2aln.T.Fmdbr1wT2LlNWhRf505e2ikZpUlAV7zo0u6cpS8qkSWiTM07DnJKzQWBtAIsBusx853srWza6vvMDe5Cf_5deDZWCP5sPwhIz9aa65XalgHwLipdBpdphU3q0_tBva0Vu42BjC3iU2HcxmgmAeIlA5PzloMu5vGJd1yPNU26SShWWYHbawTCjLxlQ5olaDO3V36gT2Cj.t9UAhMKBFFivdCnJ.zlxijA4; _gorest_session=E%2BnE0x0GtXjp1htzukKZ8%2F6RX0IAa2k0AkE1QQzpeDdUgkGAgP8kDAa%2FxIT%2FJL4Yo0VFtFfQLMLpTS5Rdc43KsjPyrHoNiqinvhivoG1r4Tg5q5G1s91Bh9%2Bj6KwulrbXrAgQ%2BvM8wT29oHxxn3m99krILcJs9Q5oVKcu%2ByCj2YLyg6NdSQLXvbwF0c%2F5I91B3OSlhXUk8WsY5ucGncKC4zeMDFNrM3YymbTfPOeKbbmDi8OPydcdK5Jg4aqCKjapVJzLr2lq4vd%2FWUECjQBF8Ybt4hseyQiSOjOMuIb1q5egvwW9IvUg3F7fQfLYp4%3D--yGnglCr7GTvBx%2FhV--%2B60FmrwmUPidwVFKvY04uQ%3D%3D' \\\r\n  -H 'origin: https://gorest.co.in' \\\r\n  -H 'priority: u=1, i' \\\r\n  -H 'referer: https://gorest.co.in/rest-console' \\\r\n  -H 'sec-ch-ua: \"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Microsoft Edge\";v=\"144\"' \\\r\n  -H 'sec-ch-ua-mobile: ?0' \\\r\n  -H 'sec-ch-ua-platform: \"Windows\"' \\\r\n  -H 'sec-fetch-dest: empty' \\\r\n  -H 'sec-fetch-mode: cors' \\\r\n  -H 'sec-fetch-site: same-origin' \\\r\n  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0' \\\r\n  -H 'x-csrf-token: bLnofxHJBJPAX3ClZqcqEGAIl-tzbutOMGrjA2bCwLajMaIiAsbhUvxeFAxOwI2-bUao1n1_5ppL0Eeb7_rNvg' \\\r\n  -H 'x-requested-with: XMLHttpRequest' \\\r\n  --data-raw $'  {\\n    \"email\": \"MILLER@HOTMAIL.COM\",\\n    \"name\": \"MILLER\",\\n    \"gender\": \"male\",\\n    \"status\": \"active\"\\n  }\\n'"
+      },
+      "response": []
+    },
+    {
+      "name": "crearUsuarioApiPruebasCod404",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const expectedStatus = [404];\r",
+              "\r",
+              "pm.test(\"Status code esperado\", function () {\r",
+              "    pm.expect(expectedStatus).to.include(pm.response.code);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "accept",
+            "value": "application/json, text/plain, */*"
+          },
+          {
+            "key": "accept-language",
+            "value": "es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,es-CO;q=0.5"
+          },
+          {
+            "key": "authorization",
+            "value": "Bearer 56bc05e6d8b0821d1d6fbbbd78c0e36ebfb330504835b0e1007590370279ec4a"
+          },
+          {
+            "key": "content-type",
+            "value": "application/json"
+          },
+          {
+            "key": "origin",
+            "value": "https://gorest.co.in"
+          },
+          {
+            "key": "priority",
+            "value": "u=1, i"
+          },
+          {
+            "key": "referer",
+            "value": "https://gorest.co.in/rest-console"
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Microsoft Edge\";v=\"144\""
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"Windows\""
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "empty"
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "cors"
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "same-origin"
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0"
+          },
+          {
+            "key": "x-csrf-token",
+            "value": "bLnofxHJBJPAX3ClZqcqEGAIl-tzbutOMGrjA2bCwLajMaIiAsbhUvxeFAxOwI2-bUao1n1_5ppL0Eeb7_rNvg"
+          },
+          {
+            "key": "x-requested-with",
+            "value": "XMLHttpRequest"
+          },
+          {
+            "key": "Cookie",
+            "value": "cf_clearance=VUdMiwKfxoQbngReBMQYIU.ilWDqKJ5WR1W402c.Loo-1770954859-1.2.1.1-tTI2aln.T.Fmdbr1wT2LlNWhRf505e2ikZpUlAV7zo0u6cpS8qkSWiTM07DnJKzQWBtAIsBusx853srWza6vvMDe5Cf_5deDZWCP5sPwhIz9aa65XalgHwLipdBpdphU3q0_tBva0Vu42BjC3iU2HcxmgmAeIlA5PzloMu5vGJd1yPNU26SShWWYHbawTCjLxlQ5olaDO3V36gT2Cj.t9UAhMKBFFivdCnJ.zlxijA4; _gorest_session=E%2BnE0x0GtXjp1htzukKZ8%2F6RX0IAa2k0AkE1QQzpeDdUgkGAgP8kDAa%2FxIT%2FJL4Yo0VFtFfQLMLpTS5Rdc43KsjPyrHoNiqinvhivoG1r4Tg5q5G1s91Bh9%2Bj6KwulrbXrAgQ%2BvM8wT29oHxxn3m99krILcJs9Q5oVKcu%2ByCj2YLyg6NdSQLXvbwF0c%2F5I91B3OSlhXUk8WsY5ucGncKC4zeMDFNrM3YymbTfPOeKbbmDi8OPydcdK5Jg4aqCKjapVJzLr2lq4vd%2FWUECjQBF8Ybt4hseyQiSOjOMuIb1q5egvwW9IvUg3F7fQfLYp4%3D--yGnglCr7GTvBx%2FhV--%2B60FmrwmUPidwVFKvY04uQ%3D%3D"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\n    \"email\": \"{{$randomFirstName}}@HOTMAIL.COM\",\n    \"name\": \"{{$randomFirstName}}\",\n    \"gender\": \"male\",\n    \"status\": \"active\"\n  }\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://gorest.co.in/public/v2/users1",
+          "protocol": "https",
+          "host": [
+            "gorest",
+            "co",
+            "in"
+          ],
+          "path": [
+            "public",
+            "v2",
+            "users1"
+          ]
+        },
+        "description": "Generated from cURL: curl 'https://gorest.co.in/public/v2/users' \\\r\n  -H 'accept: application/json, text/plain, */*' \\\r\n  -H 'accept-language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,es-CO;q=0.5' \\\r\n  -H 'authorization: Bearer 56bc05e6d8b0821d1d6fbbbd78c0e36ebfb330504835b0e1007590370279ec4a' \\\r\n  -H 'content-type: application/json' \\\r\n  -b 'cf_clearance=VUdMiwKfxoQbngReBMQYIU.ilWDqKJ5WR1W402c.Loo-1770954859-1.2.1.1-tTI2aln.T.Fmdbr1wT2LlNWhRf505e2ikZpUlAV7zo0u6cpS8qkSWiTM07DnJKzQWBtAIsBusx853srWza6vvMDe5Cf_5deDZWCP5sPwhIz9aa65XalgHwLipdBpdphU3q0_tBva0Vu42BjC3iU2HcxmgmAeIlA5PzloMu5vGJd1yPNU26SShWWYHbawTCjLxlQ5olaDO3V36gT2Cj.t9UAhMKBFFivdCnJ.zlxijA4; _gorest_session=E%2BnE0x0GtXjp1htzukKZ8%2F6RX0IAa2k0AkE1QQzpeDdUgkGAgP8kDAa%2FxIT%2FJL4Yo0VFtFfQLMLpTS5Rdc43KsjPyrHoNiqinvhivoG1r4Tg5q5G1s91Bh9%2Bj6KwulrbXrAgQ%2BvM8wT29oHxxn3m99krILcJs9Q5oVKcu%2ByCj2YLyg6NdSQLXvbwF0c%2F5I91B3OSlhXUk8WsY5ucGncKC4zeMDFNrM3YymbTfPOeKbbmDi8OPydcdK5Jg4aqCKjapVJzLr2lq4vd%2FWUECjQBF8Ybt4hseyQiSOjOMuIb1q5egvwW9IvUg3F7fQfLYp4%3D--yGnglCr7GTvBx%2FhV--%2B60FmrwmUPidwVFKvY04uQ%3D%3D' \\\r\n  -H 'origin: https://gorest.co.in' \\\r\n  -H 'priority: u=1, i' \\\r\n  -H 'referer: https://gorest.co.in/rest-console' \\\r\n  -H 'sec-ch-ua: \"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Microsoft Edge\";v=\"144\"' \\\r\n  -H 'sec-ch-ua-mobile: ?0' \\\r\n  -H 'sec-ch-ua-platform: \"Windows\"' \\\r\n  -H 'sec-fetch-dest: empty' \\\r\n  -H 'sec-fetch-mode: cors' \\\r\n  -H 'sec-fetch-site: same-origin' \\\r\n  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0' \\\r\n  -H 'x-csrf-token: bLnofxHJBJPAX3ClZqcqEGAIl-tzbutOMGrjA2bCwLajMaIiAsbhUvxeFAxOwI2-bUao1n1_5ppL0Eeb7_rNvg' \\\r\n  -H 'x-requested-with: XMLHttpRequest' \\\r\n  --data-raw $'  {\\n    \"email\": \"MILLER@HOTMAIL.COM\",\\n    \"name\": \"MILLER\",\\n    \"gender\": \"male\",\\n    \"status\": \"active\"\\n  }\\n'"
+      },
+      "response": []
+    }
+  ]
+}
